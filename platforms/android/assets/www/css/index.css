@@ -1,0 +1,73 @@
+/* MATERIALZIE CSS RESET */
+#sidenav-overlay {background-color:transparent;}
+.bottom_tabs {    z-index: 1;}
+.bottom_tabs i,
+.fixed_top_bar a {color:white;}
+a {color:#999;}
+i.active, .toggle_active a.active i {color:#FF1744!important}
+
+/* DISPLAY NONE */
+.page, .profile_tab {display:none;}
+.default_page {display:block;}
+
+/* TIMLINE POST CONFIGURATIONS */
+.timeline_post {margin-top:10px;}
+.fixed_top_bar {position:fixed; top:0; z-index:10;}
+
+.timeline_post_top {padding-left:10px;}
+
+.timeline_post img,
+.timeline_post video {width:100%;}
+
+.post_options i {padding:6px 10px;}
+.post_options {color:#999;}
+.option_share {padding:10px 18px;}
+.option_more {padding:5px 8px;}
+
+
+
+/* PROFILE TAB */
+.profile_posts img {width:100%;}
+.profile_posts div {margin-bottom:-6px;}
+.level_bar {border:1px solid #999; height:20px; position:relative; z-index:-2;}
+.level_bar div {border-right:1px solid #999; width:10%; height:100%; float:left;}
+.lv_percentage {height:100%; background-color:#b2ff59; position:absolute; left:0; z-index: -1}
+nav {background-color:white; padding:0!important;}
+.tab a {color:#999!important;}
+.more_comments {color:#999; display:none;}
+.seguindo,
+.titulo_do_mano {margin-top:-10px; background-color:#ffffff; color:#333; font-size:12px;}
+.profile_posts {display:block;}
+.profile_avatar {border-radius:200px;width:80%;}
+
+/* SEARCH TAB */
+.search_tab div {}
+.search_tab .default_page img {width:100%; margin-bottom:-10px;}
+.carousel-slider {height:200px!important;}
+
+/* TAKE A CHALLENGE TAB */
+.boxed .col {text-align:center; min-height:200px!important; border:1px solid #222;}
+.boxed i {font-size:5rem!important; margin-top:50px;}
+.challenge_list li {background-color:transparent!important; border-bottom:1px solid #999!important; padding:15px 20px!important;}
+
+.childs_go_to_challenge_description .col {border:1px solid #CCC;}
+
+/* NOTIFICATIONS TAB */
+#test4 .default_page {padding:15px 5px 15px 10px;}
+.perfil_img {border-radius: 100%;}
+.notification_block {margin-bottom:10px; display:flex; align-items: center;}
+.small_thumbnail {width:80%;}
+.follow.active {background-color:#fff!important; color:#666!important;}
+
+
+/* POST PAGE TOP */
+.post_page_top div {padding-left:10px; font-size:16px;}
+
+
+/* COMMENT SECTION */
+/* EXTRA JUNK */
+.go_to_chatrooms {margin-right:20px;}
+.modal {border-radius:10px;}
+.modal .modal-content {padding:0px}
+.modal .collection {border:0;}
+#sidenav-overlay {z-index:-1;}
