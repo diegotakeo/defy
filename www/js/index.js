@@ -66,22 +66,30 @@ $(function(){
     }
     //------------------------------------------------------------------------------------ [AJAX SET DATA]
     function set_profile(tab, data) {
-        $(tab + ' .profile_avatar').attr('src', 'img/pic/'+data.nickname+'.jpg');
+        var badge;
+        if (data.lv < 10) badge = '0';
+        else if (data.lv < 20) badge = '1';
+        else if (data.lv < 30) badge = '2';
+        else if (data.lv < 40) badge = '3';
+        else if (data.lv < 50) badge = '4';
+        else badge = '5';
+
+
+        $(tab + ' .profile_avatar').attr('src', 'img/pic/'+data.username+'.jpg');
         $(tab + ' .profile_views').text(data.views);
         $(tab + ' .profile_followers').text(data.followers);
         $(tab + ' .profile_following').text(data.following);
-        $(tab + ' .profile_badge').attr('src', 'img/badges/'+data.user_badge+'.png');
+        $(tab + ' .profile_badge').attr('src', 'img/badges/'+badge+'.png');
         $(tab + ' .profile_username').text(data.name);
-        $(tab + ' .profile_description').text(data.description);
-        $(tab + ' .titulo_do_mano').text(data.user_title);
+        $(tab + ' .profile_description').text(data.about);
+        $(tab + ' .titulo_do_mano').text(data.selected_title);
         $(tab + ' .profile_level').text(data.lv);
         $(tab + ' .lv_percentage').css('width', data.xp+'0%');
     }
     function get_user_profile(user, clicked_tab){
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:8080/defy/get_user.php',
-            data: { nickname: user },
+            url: 'https://defy-182809.appspot.com/api/user/'+user,
             dataType: 'json',
             crossDomain: true,
             success: function (data) {
@@ -94,7 +102,7 @@ $(function(){
                 // GET USER POSTS
                 $.ajax({
                     type: 'GET',
-                    url: 'http://localhost:8080/defy/get_user_posts.php',
+                    url: 'http://localhost:8080/defy_php/get_user_posts.php',
                     data: { nickname: user },
                     dataType: 'json',
                     crossDomain: true,
@@ -371,7 +379,7 @@ $(function(){
     });
 
     //------------------------------------------------------------------------------------ [ EVERYTHING AJAX ]
-
+    /*
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/defy/pesquisa_select.php',
@@ -385,13 +393,14 @@ $(function(){
             console.log(errorThrown);
         }
     });
-
+    */
 
     // GET USER PROFILE
     //var logged_user = 'y_lumberjack';
     var logged_user = 'DonaldDuck64';
+    var clicked_user = 'Lulesi';
     var tab = '#test5';
-    get_user_profile(logged_user, tab);
+    get_user_profile(clicked_user, tab);
 
 });
 
